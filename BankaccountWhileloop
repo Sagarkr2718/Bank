@@ -1,0 +1,31 @@
+import java.util.*;
+class Main {
+	public static void main(String args[]) {
+		// Your code goes here
+		Scanner sc = new Scanner(System.in);
+    int balance = sc.nextInt();
+		int operations = sc.nextInt();
+		
+		int j=1;
+		while(operations>0){
+			int type= sc.nextInt();
+			int amount = sc.nextInt();
+		
+	
+		if(type==1){
+			//ADD
+			balance=balance+amount;
+			System.out.println(balance);
+		}
+		else if(type==2 && balance>=amount){
+			balance=balance-amount;
+			System.out.println(balance);
+		}
+		else if(type==2 && amount>balance){
+			System.out.println("insufficient balance");
+		}
+			operations--;
+			
+		}
+	}
+}
